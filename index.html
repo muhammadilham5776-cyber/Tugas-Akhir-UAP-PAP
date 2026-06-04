@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterWise App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="main-dashboard-layout" class="app-layout">
+        <aside class="sidebar-nav">
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-droplet"></i> WaterWise
+            </div>
+            <nav class="sidebar-menu">
+                <button class="nav-item active" data-target="page-home"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="nav-item" data-target="page-kalkulator"><i class="fa-solid fa-calculator"></i><span>Kalkulator</span></button>
+                <button class="nav-item" data-target="page-learn"><i class="fa-solid fa-book-open"></i><span>Learn</span></button>
+                <button class="nav-item" data-target="page-report"><i class="fa-solid fa-circle-exclamation"></i><span>Report</span></button>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="app-header">
+                <div class="logo-mobile">
+                    <i class="fa-solid fa-droplet"></i> WaterWise
+                </div>
+                <div class="header-title-desktop">Dashboard / Home</div>
+                <div class="header-icons">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-user" id="profile-icon-btn" title="Profil"></i>
+                </div>
+            </header>
+
+            <main class="page-content">
+
+                <div id="page-home" class="page active">
+                    <div class="responsive-grid-2">
+                        <div class="hero-banner">
+                            <h2>Skuyy Jaga Air Kita Hari Ini!</h2>
+                            <p>Mari kita pantau kualitas dan lestarikan sumber daya air untuk masa depan yang lebih jernih.</p>
+                            <button class="btn-white" id="hero-cta-btn">Lihat Panduan</button>
+                        </div>
+                        
+                        <div class="card score-card">
+                            <span class="score-label">Air Terselamatkan</span>
+                            <h2 class="score-value">1,240 <span style="font-size:1.2rem; font-weight:400; color:#333;">Liter</span></h2>
+                            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">Bulan ini Anda menghemat 12% lebih banyak dibanding bulan lalu.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+                                <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:#64748b;">
+                                    <span>Target Bulanan</span><span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="responsive-grid-2">
+                        <div class="card">
+                            <div class="card-title-row">
+                                <div>
+                                    <h3 style="font-size: 1.1rem; color: #0288d1; font-weight: 700;">Kualitas Air Saat Ini</h3>
+                                    <p style="font-size: 0.8rem; color:#64748b;"><i class="fa-solid fa-location-dot"></i> Jakarta Selatan, ID</p>
+                                </div>
+                                <span class="badge-green">Sangat Baik</span>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-box"><div class="stat-label">pH</div><div class="stat-value">7.2</div></div>
+                                <div class="stat-box"><div class="stat-label">TDS</div><div class="stat-value">45</div></div>
+                                <div class="stat-box"><div class="stat-label">Suhu</div><div class="stat-value">24°C</div></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="section-header">
+                                <h3 style="font-size: 1.1rem; font-weight: 700;">Berita Terbaru</h3>
+                                <a href="#" style="font-size: 0.85rem; color:#0288d1; text-decoration:none; font-weight:600;">Lihat Semua</a>
+                            </div>
+                            <div class="news-scroll">
+                                <div class="news-card">
+                                    <div class="news-img" style="background: url('https://images.unsplash.com/photo-1541675154750-0444c7d51e8e?w=300') center/cover;"></div>
+                                    <div class="news-content">
+                                        <span class="badge-green" style="background:#dbeafe; color:#1e40af;">Inisiatif</span>
+                                        <h4>Pembersihan Sungai Ciliwung Melibatkan 500 Relawan Minggu...</h4>
+                                    </div>
+                                </div>
+                                <div class="news-card">
+                                    <div class="news-img" style="background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300') center/cover;"></div>
+                                    <div class="news-content">
+                                        <span class="badge-green" style="background:#dbeafe; color:#1e40af;">Teknologi</span>
+                                        <h4>Sensor Baru Deteksi Kualitas Air Secara Real-time...</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cta-banner">
+                                <h4><i class="fa-solid fa-triangle-exclamation"></i> Laporkan Masalah Air?</h4>
+                                <p>Bantu kami mendeteksi kebocoran atau kontaminasi di sekitar Anda.</p>
+                                <button class="btn-cta" id="home-report-btn">Laporkan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-kalkulator" class="page">
+                    <h2 style="font-size: 1.5rem; margin-bottom: 4px; font-weight: 700;">Kalkulator Air</h2>
+                    <p style="font-size: 0.9rem; color:#64748b; margin-bottom: 24px;">Hitung estimasi penggunaan air harian Anda untuk membantu konservasi.</p>
+
+                    <div class="responsive-grid-2" style="align-items: start;">
+                        <div class="card">
+                            <div class="calc-row">
+                                <div class="calc-label-row">
+                                    <span><i class="fa-solid fa-shower" style="color:#0288d1;"></i> Mandi (Durasi)</span>
+                                    <span id="mandi-val" class="calc-indicator">10 Menit</span>
+                                </div>
+                                <input type="range" min="0" max="30" value="10" class="slider" id="mandi-slide">
+                            </div>
+                            <div class="calc-row">
+                                <div class="calc-label-row">
+                                    <span><i class="fa-solid fa-shirt" style="color:#0288d1;"></i> Mencuci Pakaian</span>
+                                    <span id="cuci-val" class="calc-indicator">1 Kali</span>
+                                </div>
+                                <input type="range" min="0" max="5" value="1" class="slider" id="cuci-slide">
+                            </div>
+                            <div class="calc-row">
+                                <div class="calc-label-row">
+                                    <span><i class="fa-solid fa-utensils" style="color:#0288d1;"></i> Mencuci Piring</span>
+                                    <span id="piring-val" class="calc-indicator">2 Kali</span>
+                                </div>
+                                <input type="range" min="0" max="5" value="2" class="slider" id="piring-slide">
+                            </div>
+                            <div class="calc-row">
+                                <div class="calc-label-row">
+                                    <span><i class="fa-solid fa-seedling" style="color:#0288d1;"></i> Menyiram Tanaman</span>
+                                    <span id="tanaman-val" class="calc-indicator">0 Menit</span>
+                                </div>
+                                <input type="range" min="0" max="20" value="0" class="slider" id="tanaman-slide">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="total-box">
+                                <span style="font-size:0.9rem; opacity:0.9;">Total Penggunaan Harian</span>
+                                <h2 style="font-size: 2.5rem; margin:8px 0; font-weight: 800;" id="total-liter">170 Liter</h2>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; font-size:0.9rem;">
+                                    <span><i class="fa-solid fa-shield-heart"></i> Status: Hemat</span>
+                                    <span style="background:rgba(255,255,255,0.2); padding:4px 12px; border-radius:12px; font-weight:600;">BAGUS</span>
+                                </div>
+                            </div>
+                            <div class="cta-banner" style="background-color:#e0f2fe; color:#0369a1;">
+                                <p style="font-weight:700; font-size:0.9rem;"><i class="fa-solid fa-lightbulb"></i> Tips Hari Ini</p>
+                                <p style="font-size:0.8rem; margin-top:6px; line-height:1.4;">Gunakan pancuran (shower) hemat air untuk mengurangi penggunaan hingga 30% per mandi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-learn" class="page">
+                    <h2 style="font-size: 1.5rem; margin-bottom: 4px; font-weight: 700;">Edukasi Air Bersih</h2>
+                    <p style="font-size: 0.9rem; color:#64748b; margin-bottom: 20px;">Pelajari cara-cara sederhana namun berdampak besar untuk melestarikan sumber daya air kita bagi generasi mendatang.</p>
+
+                    <div class="filter-tabs">
+                        <button class="tab active">Tips</button>
+                        <button class="tab">Fakta</button>
+                        <button class="tab">Video</button>
+                    </div>
+
+                    <div class="responsive-grid-3">
+                        <div class="edu-card">
+                            <div class="edu-img" style="background-image: url('https://images.unsplash.com/photo-1605141264843-c0d16b539958?w=400');"></div>
+                            <div class="edu-body">
+                                <span class="badge-green">KAMAR MANDI</span>
+                                <h3>Matikan Keran Saat Sikat Gigi</h3>
+                                <p>Melihat air mengalir sia-sia? Mematikan keran saat menyikat gigi dapat menghemat hingga 15 liter air per minute.</p>
+                                <a href="#">Pelajari Selengkapnya ></a>
+                            </div>
+                        </div>
+
+                        <div class="edu-card">
+                            <div class="edu-img" style="background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400');"></div>
+                            <div class="edu-body">
+                                <span class="badge-green" style="background:#fef3c7; color:#d97706;">LUAR RUANGAN</span>
+                                <h3>Gunakan Ember Saat Mencuci Mobil</h3>
+                                <p>Menggunakan selang terus-menerus membuang banyak air. Ember membantu Anda mengontrol pemakaian air secara efisien.</p>
+                                <a href="#">Pelajari Selengkapnya ></a>
+                            </div>
+                        </div>
+
+                        <div class="edu-card">
+                            <div class="edu-img" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400');"></div>
+                            <div class="edu-body">
+                                <span class="badge-green" style="background:#e0f2fe; color:#0369a1;">DAPUR</span>
+                                <h3>Perbaiki Pipa yang Bocor</h3>
+                                <p>Satu tetesan per detik dari keran bocor bisa membuang lebih dari 10.000 liter air per tahun. Jangan tunda perbaikan!</p>
+                                <a href="#">Pelajari Selengkapnya ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-report" class="page">
+                    <h2 style="font-size: 1.5rem; margin-bottom: 4px; font-weight: 700;">Lapor Masalah Air</h2>
+                    <p style="font-size: 0.9rem; color:#64748b; margin-bottom: 24px;">Laporkan kebocoran, pencemaran, atau gangguan layanan dengan mengisi formulir di bawah ini.</p>
+
+                    <div class="responsive-grid-2" style="align-items: start;">
+                        <div class="card">
+                            <form id="report-form">
+                                <div class="form-group">
+                                    <label>Jenis Masalah</label>
+                                    <select class="form-control">
+                                        <option>Pilih jenis masalah</option>
+                                        <option>Pipa Bocor / Retak</option>
+                                        <option>Air Kontaminasi / Keruh</option>
+                                        <option>Gangguan Layanan Air</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Lokasi Masalah</label>
+                                    <button type="button" class="form-control btn-location-trigger">
+                                        <i class="fa-solid fa-location-crosshairs"></i> Gunakan Lokasi Saat Ini
+                                    </button>
+                                    <input type="text" class="form-control" style="margin-top:8px;" placeholder="Atau ketik alamat lengkap...">
+                                </div>
+                                <div class="form-group">
+                                    <label>Foto Masalah</label>
+                                    <div class="upload-box">
+                                        <i class="fa-solid fa-camera"></i>
+                                        <p style="font-weight: 600; font-size: 0.9rem; margin-top: 4px; color:#333;">Klik untuk ambil foto atau unggah file</p>
+                                        <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">Format JPG, PNG (Maks. 5MB)</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Deskripsi Singkat</label>
+                                    <textarea class="form-control" rows="3" placeholder="Jelaskan detail masalah yang Anda temukan..."></textarea>
+                                </div>
+                                <button type="submit" class="btn-cta" style="background-color:#007bb5; padding: 14px;"><i class="fa-solid fa-paper-plane"></i> Kirim Laporan</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-target="page-home"><i class="fa-solid fa-house"></i><span>Home</span></button>
+            <button class="nav-item" data-target="page-kalkulator"><i class="fa-solid fa-calculator"></i><span>Kalkulator</span></button>
+            <button class="nav-item" data-target="page-learn"><i class="fa-solid fa-book-open"></i><span>Learn</span></button>
+            <button class="nav-item" data-target="page-report"><i class="fa-solid fa-circle-exclamation"></i><span>Report</span></button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
