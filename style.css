@@ -149,6 +149,159 @@ body {
 .upload-box { border: 2px dashed #cbd5e1; padding: 24px; text-align: center; border-radius: 8px; cursor: pointer; color: #64748b; }
 .upload-box i { font-size: 1.8rem; color: #0288d1; margin-bottom: 6px; }
 
+/* KODE BARU KHUSUS HALAMAN LOGIN & REGISTER */
+.custom-auth-wrapper {
+    background-color: #d1ecf9;
+    min-height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+    border-radius: 24px;
+}
+
+.custom-auth-logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.custom-logo-circle {
+    background-color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.custom-logo-circle .icon-drop {
+    color: #3ca9e2;
+    font-size: 3.2rem;
+    position: relative;
+    top: 2px;
+}
+
+.custom-logo-leaves {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 2px;
+}
+
+.custom-logo-leaves .leaf-left {
+    color: #79c545;
+    font-size: 1.1rem;
+    transform: rotate(-35deg) scaleX(-1);
+}
+
+.custom-logo-leaves .leaf-right {
+    color: #53b648;
+    font-size: 1.1rem;
+    transform: rotate(35deg);
+}
+
+.custom-logo-text {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1e5582;
+    margin-top: 12px;
+    letter-spacing: -0.5px;
+}
+
+.custom-logo-text span {
+    color: #3ca9e2;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.custom-auth-card {
+    background-color: #3ca9e2;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 28px;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 10px 25px rgba(2, 136, 209, 0.25);
+}
+
+.custom-input-box {
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    height: 52px;
+}
+
+.custom-input-icon {
+    color: #707070;
+    font-size: 1.15rem;
+    width: 24px;
+}
+
+.custom-input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    color: #333333;
+    padding-left: 8px;
+    background: transparent;
+}
+
+.custom-input-box input::placeholder {
+    color: #707070;
+}
+
+.custom-eye-icon {
+    color: #1e1e1e;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.custom-auth-btn {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(to bottom, #aae4f5, #8ee1f8);
+    color: #1a2332;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.2s;
+}
+
+.custom-auth-btn:hover {
+    opacity: 0.95;
+}
+
+.custom-auth-switch-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.custom-auth-switch-text span {
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.custom-auth-switch-text span:hover {
+    text-decoration: underline;
+}
+
 .bottom-nav {
     position: fixed;
     bottom: 0; left: 0; right: 0;
@@ -227,6 +380,10 @@ body {
     .news-card { width: 100%; min-width: 100%; display: flex; height: 100px; }
     .news-img { width: 100px; height: 100%; }
     .news-content { display: flex; flex-direction: column; justify-content: center; }
+    
+    .custom-auth-wrapper {
+        min-height: calc(100vh - 120px);
+    }
 }
 
 @media (min-width: 1024px) {
