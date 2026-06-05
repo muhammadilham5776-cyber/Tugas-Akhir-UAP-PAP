@@ -149,7 +149,7 @@ body {
 .upload-box { border: 2px dashed #cbd5e1; padding: 24px; text-align: center; border-radius: 8px; cursor: pointer; color: #64748b; }
 .upload-box i { font-size: 1.8rem; color: #0288d1; margin-bottom: 6px; }
 
-/* KODE BARU KHUSUS HALAMAN LOGIN & REGISTER */
+/* KODE HALAMAN LOGIN & REGISTER */
 .custom-auth-wrapper {
     background-color: #d1ecf9;
     min-height: calc(100vh - 180px);
@@ -170,43 +170,21 @@ body {
 
 .custom-logo-circle {
     background-color: white;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.custom-logo-circle .icon-drop {
+.custom-logo-circle i {
     color: #3ca9e2;
-    font-size: 3.2rem;
-    position: relative;
-    top: 2px;
+    font-size: 2.5rem;
 }
 
-.custom-logo-leaves {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    gap: 2px;
-}
-
-.custom-logo-leaves .leaf-left {
-    color: #79c545;
-    font-size: 1.1rem;
-    transform: rotate(-35deg) scaleX(-1);
-}
-
-.custom-logo-leaves .leaf-right {
-    color: #53b648;
-    font-size: 1.1rem;
-    transform: rotate(35deg);
-}
-
-.custom-logo-text {
+.custom-logo-brand {
     font-size: 2.2rem;
     font-weight: 800;
     color: #1e5582;
@@ -214,10 +192,10 @@ body {
     letter-spacing: -0.5px;
 }
 
-.custom-logo-text span {
+.custom-logo-brand span {
     color: #3ca9e2;
     font-weight: 500;
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 .custom-auth-card {

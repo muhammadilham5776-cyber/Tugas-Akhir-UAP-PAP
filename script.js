@@ -79,8 +79,8 @@ const tanaman = document.getElementById('tanaman-slide');
 const totalHtml = document.getElementById('total-liter');
 
 function hitungTotal() {
-    let airMandi = (mandi ? mandi.value : 10) * 12;
-    let airCuci = (cuci ? cuci.value : 1) * 40;
+    let airMandi = (mandi ? mandi.value : 12) * 12;
+    let airCuci = (cuci ? cuci.value : 2) * 40;
     let airPiring = (piring ? piring.value : 2) * 5;
     let airTanaman = (tanaman ? tanaman.value : 0) * 5;
     
